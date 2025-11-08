@@ -1,0 +1,325 @@
+package org.redes.testes;
+
+public class TesteFase1 {
+
+
+GNB:{
+
+"C:\Program Files\Java\jdk-21\bin\java.exe" -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:59945,suspend=y,server=n -javaagent:C:\Users\Josed\AppData\Local\JetBrains\IdeaIC2023.2\captureAgent\debugger-agent.jar -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Github\EFC02\target\classes;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.4\lib\idea_rt.jar" org.redes.Main gbn
+Connected to the target VM, address: '127.0.0.1:59945', transport: 'socket'
+[11:38:11.647] [MAIN] Iniciando teste da Fase 2 (Go-Back-N)
+[11:38:11.673] [GBN/RECEIVER] Aguardando na porta 9010
+[11:38:12.219] [SIMULADOR] Pacote perdido: [Packet type=DATA seq=0 len=10 checksum=382270...]
+[11:38:12.223] [GBN/SENDER] Enviado seq=0 → Mensagem 1
+[11:38:12.341] [GBN/SENDER] Enviado seq=1 → Mensagem 2
+[11:38:12.449] [GBN/SENDER] Enviado seq=2 → Mensagem 3
+[11:38:12.528] [CANAL] Pacote enviado com atraso de 0,175s → 127.0.0.1
+[11:38:12.533] [GBN/RECEIVER] Fora de ordem (esperava 0, recebeu 1) → reenviando ACK último=-1
+[11:38:12.534] [GBN/SENDER] ACK recebido: -1
+[11:38:12.556] [GBN/SENDER] Enviado seq=3 → Mensagem 4
+[11:38:12.572] [CANAL] Pacote enviado com atraso de 0,118s → 127.0.0.1
+[11:38:12.573] [GBN/RECEIVER] Fora de ordem (esperava 0, recebeu 2) → reenviando ACK último=-1
+[11:38:12.574] [GBN/SENDER] ACK recebido: -1
+[11:38:12.664] [GBN/SENDER] Enviado seq=4 → Mensagem 5
+[11:38:12.680] [CANAL] Pacote enviado com atraso de 0,122s → 127.0.0.1
+[11:38:12.680] [GBN/RECEIVER] Fora de ordem (esperava 0, recebeu 3) → reenviando ACK último=-1
+[11:38:12.681] [GBN/SENDER] ACK recebido: -1
+[11:38:12.805] [CANAL] Pacote enviado com atraso de 0,136s → 127.0.0.1
+[11:38:12.805] [GBN/RECEIVER] Fora de ordem (esperava 0, recebeu 4) → reenviando ACK último=-1
+[11:38:12.806] [GBN/SENDER] ACK recebido: -1
+[11:38:14.235] [GBN/SENDER] TIMEOUT → retransmitindo janela 0 até 4
+[11:38:14.235] [GBN/SENDER] Reenvio seq=0
+[11:38:14.235] [GBN/SENDER] Reenvio seq=1
+[11:38:14.235] [GBN/SENDER] Reenvio seq=2
+[11:38:14.235] [SIMULADOR] Pacote perdido: [Packet type=DATA seq=3 len=10 checksum=34f7ab...]
+[11:38:14.235] [GBN/SENDER] Reenvio seq=3
+[11:38:14.235] [GBN/SENDER] Reenvio seq=4
+[11:38:14.310] [CANAL] Pacote enviado com atraso de 0,070s → 127.0.0.1
+[11:38:14.310] [GBN/RECEIVER] Recebido seq=0 → Mensagem 1
+[11:38:14.311] [GBN/SENDER] ACK recebido: 0
+[11:38:14.311] [GBN/SENDER] Base atualizada → 1
+[11:38:14.326] [GBN/SENDER] Enviado seq=5 → Mensagem 6
+[11:38:14.342] [CANAL] Pacote enviado com atraso de 0,094s → 127.0.0.1
+[11:38:14.343] [GBN/RECEIVER] Fora de ordem (esperava 1, recebeu 4) → reenviando ACK último=0
+[11:38:14.343] [GBN/SENDER] ACK recebido: 0
+[11:38:14.358] [CANAL] Pacote enviado com atraso de 0,111s → 127.0.0.1
+[11:38:14.358] [GBN/RECEIVER] Recebido seq=1 → Mensagem 2
+[11:38:14.358] [GBN/SENDER] ACK recebido: 1
+[11:38:14.359] [GBN/SENDER] Base atualizada → 2
+[11:38:14.373] [CANAL] Pacote enviado com atraso de 0,135s → 127.0.0.1
+[11:38:14.373] [GBN/RECEIVER] Recebido seq=2 → Mensagem 3
+[11:38:14.373] [GBN/SENDER] ACK recebido: 2
+[11:38:14.374] [GBN/SENDER] Base atualizada → 3
+[11:38:14.420] [CANAL] Pacote enviado com atraso de 0,081s → 127.0.0.1
+[11:38:14.420] [GBN/RECEIVER] Fora de ordem (esperava 3, recebeu 5) → reenviando ACK último=2
+[11:38:14.421] [GBN/SENDER] ACK recebido: 2
+[11:38:14.435] [GBN/SENDER] Enviado seq=6 → Mensagem 7
+[11:38:14.544] [GBN/SENDER] Enviado seq=7 → Mensagem 8
+[11:38:14.544] [CANAL] Pacote enviado com atraso de 0,105s → 127.0.0.1
+[11:38:14.544] [GBN/RECEIVER] Fora de ordem (esperava 3, recebeu 6) → reenviando ACK último=2
+[11:38:14.545] [GBN/SENDER] ACK recebido: 2
+[11:38:14.652] [CANAL] Pacote enviado com atraso de 0,106s → 127.0.0.1
+[11:38:14.652] [GBN/RECEIVER] Fora de ordem (esperava 3, recebeu 7) → reenviando ACK último=2
+[11:38:14.653] [GBN/SENDER] ACK recebido: 2
+[11:38:16.378] [GBN/SENDER] TIMEOUT → retransmitindo janela 3 até 7
+[11:38:16.378] [GBN/SENDER] Reenvio seq=3
+[11:38:16.378] [GBN/SENDER] Reenvio seq=4
+[11:38:16.378] [GBN/SENDER] Reenvio seq=5
+[11:38:16.379] [SIMULADOR] Pacote corrompido: [Packet type=DATA seq=6 len=10 checksum=3e2464...]
+[11:38:16.379] [GBN/SENDER] Reenvio seq=6
+[11:38:16.379] [GBN/SENDER] Reenvio seq=7
+[11:38:16.486] [CANAL] Pacote enviado com atraso de 0,097s → 127.0.0.1
+[11:38:16.486] [GBN/RECEIVER] Fora de ordem (esperava 3, recebeu 7) → reenviando ACK último=2
+[11:38:16.486] [CANAL] Pacote enviado com atraso de 0,105s → 127.0.0.1
+[11:38:16.487] [GBN/SENDER] ACK recebido: 2
+[11:38:16.487] [GBN/RECEIVER] Fora de ordem (esperava 3, recebeu 4) → reenviando ACK último=2
+[11:38:16.487] [GBN/SENDER] ACK recebido: 2
+[11:38:16.532] [CANAL] Pacote enviado com atraso de 0,143s → 127.0.0.1
+[11:38:16.532] [GBN/RECEIVER] Pacote corrompido → reenviando ACK último=2
+[11:38:16.533] [GBN/SENDER] ACK recebido: 2
+[11:38:16.579] [CANAL] Pacote enviado com atraso de 0,189s → 127.0.0.1
+[11:38:16.579] [GBN/RECEIVER] Recebido seq=3 → Mensagem 4
+[11:38:16.579] [CANAL] Pacote enviado com atraso de 0,195s → 127.0.0.1
+[11:38:16.580] [GBN/SENDER] ACK recebido: 3
+[11:38:16.580] [GBN/SENDER] Base atualizada → 4
+[11:38:16.580] [GBN/RECEIVER] Fora de ordem (esperava 4, recebeu 5) → reenviando ACK último=3
+[11:38:16.580] [GBN/SENDER] ACK recebido: 3
+[11:38:16.594] [SIMULADOR] Pacote corrompido: [Packet type=DATA seq=8 len=10 checksum=d8bcbf...]
+[11:38:16.594] [GBN/SENDER] Enviado seq=8 → Mensagem 9
+[11:38:16.672] [CANAL] Pacote enviado com atraso de 0,075s → 127.0.0.1
+[11:38:16.672] [GBN/RECEIVER] Pacote corrompido → reenviando ACK último=3
+[11:38:16.673] [GBN/SENDER] ACK recebido: 3
+[11:38:18.589] [GBN/SENDER] TIMEOUT → retransmitindo janela 4 até 8
+[11:38:18.589] [GBN/SENDER] Reenvio seq=4
+[11:38:18.589] [GBN/SENDER] Reenvio seq=5
+[11:38:18.589] [SIMULADOR] Pacote perdido: [Packet type=DATA seq=6 len=10 checksum=3e2464...]
+[11:38:18.589] [GBN/SENDER] Reenvio seq=6
+[11:38:18.589] [GBN/SENDER] Reenvio seq=7
+[11:38:18.589] [GBN/SENDER] Reenvio seq=8
+[11:38:18.682] [CANAL] Pacote enviado com atraso de 0,079s → 127.0.0.1
+[11:38:18.682] [GBN/RECEIVER] Fora de ordem (esperava 4, recebeu 8) → reenviando ACK último=3
+[11:38:18.682] [CANAL] Pacote enviado com atraso de 0,079s → 127.0.0.1
+[11:38:18.682] [GBN/SENDER] ACK recebido: 3
+[11:38:18.682] [GBN/RECEIVER] Recebido seq=4 → Mensagem 5
+[11:38:18.682] [GBN/SENDER] ACK recebido: 4
+[11:38:18.682] [GBN/SENDER] Base atualizada → 5
+[11:38:18.698] [GBN/SENDER] Enviado seq=9 → Mensagem 10
+[11:38:18.745] [CANAL] Pacote enviado com atraso de 0,145s → 127.0.0.1
+[11:38:18.745] [GBN/RECEIVER] Recebido seq=5 → Mensagem 6
+[11:38:18.745] [GBN/SENDER] ACK recebido: 5
+[11:38:18.745] [GBN/SENDER] Base atualizada → 6
+[11:38:18.777] [CANAL] Pacote enviado com atraso de 0,176s → 127.0.0.1
+[11:38:18.777] [GBN/RECEIVER] Fora de ordem (esperava 6, recebeu 7) → reenviando ACK último=5
+[11:38:18.778] [GBN/SENDER] ACK recebido: 5
+[11:38:18.802] [GBN/SENDER] Enviado seq=10 → Mensagem 11
+[11:38:18.802] [CANAL] Pacote enviado com atraso de 0,096s → 127.0.0.1
+[11:38:18.803] [GBN/RECEIVER] Fora de ordem (esperava 6, recebeu 9) → reenviando ACK último=5
+[11:38:18.803] [GBN/SENDER] ACK recebido: 5
+[11:38:18.936] [CANAL] Pacote enviado com atraso de 0,133s → 127.0.0.1
+[11:38:18.936] [GBN/RECEIVER] Fora de ordem (esperava 6, recebeu 10) → reenviando ACK último=5
+[11:38:18.937] [GBN/SENDER] ACK recebido: 5
+[11:38:20.760] [GBN/SENDER] TIMEOUT → retransmitindo janela 6 até 10
+[11:38:20.760] [GBN/SENDER] Reenvio seq=6
+[11:38:20.760] [GBN/SENDER] Reenvio seq=7
+[11:38:20.760] [SIMULADOR] Pacote corrompido: [Packet type=DATA seq=8 len=10 checksum=d8bcbf...]
+[11:38:20.760] [GBN/SENDER] Reenvio seq=8
+[11:38:20.760] [GBN/SENDER] Reenvio seq=9
+[11:38:20.760] [GBN/SENDER] Reenvio seq=10
+[11:38:20.837] [CANAL] Pacote enviado com atraso de 0,066s → 127.0.0.1
+[11:38:20.837] [GBN/RECEIVER] Fora de ordem (esperava 6, recebeu 9) → reenviando ACK último=5
+[11:38:20.837] [GBN/SENDER] ACK recebido: 5
+[11:38:20.869] [CANAL] Pacote enviado com atraso de 0,107s → 127.0.0.1
+[11:38:20.869] [CANAL] Pacote enviado com atraso de 0,098s → 127.0.0.1
+[11:38:20.869] [GBN/RECEIVER] Recebido seq=6 → Mensagem 7
+[11:38:20.869] [GBN/SENDER] ACK recebido: 6
+[11:38:20.869] [GBN/SENDER] Base atualizada → 7
+[11:38:20.869] [GBN/RECEIVER] Recebido seq=7 → Mensagem 8
+[11:38:20.869] [GBN/SENDER] ACK recebido: 7
+[11:38:20.869] [GBN/SENDER] Base atualizada → 8
+[11:38:20.885] [GBN/SENDER] Enviado seq=11 → Mensagem 12
+[11:38:20.901] [CANAL] Pacote enviado com atraso de 0,126s → 127.0.0.1
+[11:38:20.901] [GBN/RECEIVER] Fora de ordem (esperava 8, recebeu 10) → reenviando ACK último=7
+[11:38:20.901] [GBN/SENDER] ACK recebido: 7
+[11:38:20.947] [CANAL] Pacote enviado com atraso de 0,164s → 127.0.0.1
+[11:38:20.947] [GBN/RECEIVER] Pacote corrompido → reenviando ACK último=7
+[11:38:20.947] [GBN/SENDER] ACK recebido: 7
+[11:38:20.999] [SIMULADOR] Pacote perdido: [Packet type=DATA seq=12 len=11 checksum=d90e9e...]
+[11:38:20.999] [GBN/SENDER] Enviado seq=12 → Mensagem 13
+[11:38:21.017] [CANAL] Pacote enviado com atraso de 0,117s → 127.0.0.1
+[11:38:21.017] [GBN/RECEIVER] Fora de ordem (esperava 8, recebeu 11) → reenviando ACK último=7
+[11:38:21.017] [GBN/SENDER] ACK recebido: 7
+[11:38:22.885] [GBN/SENDER] TIMEOUT → retransmitindo janela 8 até 12
+[11:38:22.885] [GBN/SENDER] Reenvio seq=8
+[11:38:22.885] [GBN/SENDER] Reenvio seq=9
+[11:38:22.885] [GBN/SENDER] Reenvio seq=10
+[11:38:22.885] [GBN/SENDER] Reenvio seq=11
+[11:38:22.885] [GBN/SENDER] Reenvio seq=12
+[11:38:22.983] [CANAL] Pacote enviado com atraso de 0,094s → 127.0.0.1
+[11:38:22.983] [GBN/RECEIVER] Fora de ordem (esperava 8, recebeu 9) → reenviando ACK último=7
+[11:38:22.983] [GBN/SENDER] ACK recebido: 7
+[11:38:23.019] [CANAL] Pacote enviado com atraso de 0,129s → 127.0.0.1
+[11:38:23.019] [GBN/RECEIVER] Recebido seq=8 → Mensagem 9
+[11:38:23.019] [GBN/SENDER] ACK recebido: 8
+[11:38:23.019] [GBN/SENDER] Base atualizada → 9
+[11:38:23.026] [GBN/SENDER] Enviado seq=13 → Mensagem 14
+[11:38:23.026] [CANAL] Pacote enviado com atraso de 0,135s → 127.0.0.1
+[11:38:23.026] [GBN/RECEIVER] Fora de ordem (esperava 9, recebeu 12) → reenviando ACK último=8
+[11:38:23.026] [GBN/SENDER] ACK recebido: 8
+[11:38:23.040] [CANAL] Pacote enviado com atraso de 0,149s → 127.0.0.1
+[11:38:23.040] [GBN/RECEIVER] Fora de ordem (esperava 9, recebeu 11) → reenviando ACK último=8
+[11:38:23.040] [GBN/SENDER] ACK recebido: 8
+[11:38:23.072] [CANAL] Pacote enviado com atraso de 0,181s → 127.0.0.1
+[11:38:23.072] [GBN/RECEIVER] Fora de ordem (esperava 9, recebeu 10) → reenviando ACK último=8
+[11:38:23.072] [GBN/SENDER] ACK recebido: 8
+[11:38:23.114] [CANAL] Pacote enviado com atraso de 0,081s → 127.0.0.1
+[11:38:23.114] [GBN/RECEIVER] Fora de ordem (esperava 9, recebeu 13) → reenviando ACK último=8
+[11:38:23.114] [GBN/SENDER] ACK recebido: 8
+[11:38:25.031] [GBN/SENDER] TIMEOUT → retransmitindo janela 9 até 13
+[11:38:25.031] [GBN/SENDER] Reenvio seq=9
+[11:38:25.031] [GBN/SENDER] Reenvio seq=10
+[11:38:25.031] [GBN/SENDER] Reenvio seq=11
+[11:38:25.031] [GBN/SENDER] Reenvio seq=12
+[11:38:25.031] [SIMULADOR] Pacote corrompido: [Packet type=DATA seq=13 len=11 checksum=c48ac5...]
+[11:38:25.031] [GBN/SENDER] Reenvio seq=13
+[11:38:25.097] [CANAL] Pacote enviado com atraso de 0,061s → 127.0.0.1
+[11:38:25.097] [GBN/RECEIVER] Fora de ordem (esperava 9, recebeu 10) → reenviando ACK último=8
+[11:38:25.098] [GBN/SENDER] ACK recebido: 8
+[11:38:25.113] [CANAL] Pacote enviado com atraso de 0,067s → 127.0.0.1
+[11:38:25.113] [GBN/RECEIVER] Fora de ordem (esperava 9, recebeu 12) → reenviando ACK último=8
+[11:38:25.114] [GBN/SENDER] ACK recebido: 8
+[11:38:25.129] [CANAL] Pacote enviado com atraso de 0,089s → 127.0.0.1
+[11:38:25.129] [GBN/RECEIVER] Pacote corrompido → reenviando ACK último=8
+[11:38:25.130] [GBN/SENDER] ACK recebido: 8
+[11:38:25.185] [CANAL] Pacote enviado com atraso de 0,152s → 127.0.0.1
+[11:38:25.185] [GBN/RECEIVER] Recebido seq=9 → Mensagem 10
+[11:38:25.185] [GBN/SENDER] ACK recebido: 9
+[11:38:25.185] [GBN/SENDER] Base atualizada → 10
+[11:38:25.193] [GBN/SENDER] Enviado seq=14 → Mensagem 15
+[11:38:25.228] [CANAL] Pacote enviado com atraso de 0,189s → 127.0.0.1
+[11:38:25.228] [GBN/RECEIVER] Fora de ordem (esperava 10, recebeu 11) → reenviando ACK último=9
+[11:38:25.229] [GBN/SENDER] ACK recebido: 9
+[11:38:25.312] [CANAL] Pacote enviado com atraso de 0,116s → 127.0.0.1
+[11:38:25.312] [GBN/RECEIVER] Fora de ordem (esperava 10, recebeu 14) → reenviando ACK último=9
+[11:38:25.312] [GBN/SENDER] ACK recebido: 9
+[11:38:27.199] [GBN/SENDER] TIMEOUT → retransmitindo janela 10 até 14
+[11:38:27.199] [GBN/SENDER] Reenvio seq=10
+[11:38:27.199] [GBN/SENDER] Reenvio seq=11
+[11:38:27.199] [GBN/SENDER] Reenvio seq=12
+[11:38:27.199] [GBN/SENDER] Reenvio seq=13
+[11:38:27.199] [GBN/SENDER] Reenvio seq=14
+[11:38:27.260] [CANAL] Pacote enviado com atraso de 0,051s → 127.0.0.1
+[11:38:27.260] [CANAL] Pacote enviado com atraso de 0,055s → 127.0.0.1
+[11:38:27.260] [GBN/RECEIVER] Fora de ordem (esperava 10, recebeu 11) → reenviando ACK último=9
+[11:38:27.260] [GBN/RECEIVER] Fora de ordem (esperava 10, recebeu 14) → reenviando ACK último=9
+[11:38:27.260] [GBN/SENDER] ACK recebido: 9
+[11:38:27.260] [GBN/SENDER] ACK recebido: 9
+[11:38:27.306] [CANAL] Pacote enviado com atraso de 0,082s → 127.0.0.1
+[11:38:27.306] [GBN/RECEIVER] Fora de ordem (esperava 10, recebeu 12) → reenviando ACK último=9
+[11:38:27.306] [GBN/SENDER] ACK recebido: 9
+[11:38:27.355] [CANAL] Pacote enviado com atraso de 0,149s → 127.0.0.1
+[11:38:27.355] [GBN/RECEIVER] Recebido seq=10 → Mensagem 11
+[11:38:27.355] [GBN/SENDER] ACK recebido: 10
+[11:38:27.355] [GBN/SENDER] Base atualizada → 11
+[11:38:27.370] [GBN/SENDER] Enviado seq=15 → Mensagem 16
+[11:38:27.401] [CANAL] Pacote enviado com atraso de 0,190s → 127.0.0.1
+[11:38:27.401] [GBN/RECEIVER] Fora de ordem (esperava 11, recebeu 13) → reenviando ACK último=10
+[11:38:27.401] [GBN/SENDER] ACK recebido: 10
+[11:38:27.481] [CANAL] Pacote enviado com atraso de 0,109s → 127.0.0.1
+[11:38:27.481] [GBN/RECEIVER] Fora de ordem (esperava 11, recebeu 15) → reenviando ACK último=10
+[11:38:27.481] [GBN/SENDER] ACK recebido: 10
+[11:38:29.370] [GBN/SENDER] TIMEOUT → retransmitindo janela 11 até 15
+[11:38:29.370] [GBN/SENDER] Reenvio seq=11
+[11:38:29.370] [GBN/SENDER] Reenvio seq=12
+[11:38:29.370] [GBN/SENDER] Reenvio seq=13
+[11:38:29.370] [GBN/SENDER] Reenvio seq=14
+[11:38:29.370] [GBN/SENDER] Reenvio seq=15
+[11:38:29.448] [CANAL] Pacote enviado com atraso de 0,063s → 127.0.0.1
+[11:38:29.448] [GBN/RECEIVER] Fora de ordem (esperava 11, recebeu 13) → reenviando ACK último=10
+[11:38:29.449] [GBN/SENDER] ACK recebido: 10
+[11:38:29.494] [CANAL] Pacote enviado com atraso de 0,122s → 127.0.0.1
+[11:38:29.494] [GBN/RECEIVER] Fora de ordem (esperava 11, recebeu 15) → reenviando ACK último=10
+[11:38:29.494] [GBN/SENDER] ACK recebido: 10
+[11:38:29.557] [CANAL] Pacote enviado com atraso de 0,178s → 127.0.0.1
+[11:38:29.557] [GBN/RECEIVER] Fora de ordem (esperava 11, recebeu 12) → reenviando ACK último=10
+[11:38:29.557] [CANAL] Pacote enviado com atraso de 0,181s → 127.0.0.1
+[11:38:29.557] [CANAL] Pacote enviado com atraso de 0,181s → 127.0.0.1
+[11:38:29.557] [GBN/RECEIVER] Recebido seq=11 → Mensagem 12
+[11:38:29.557] [GBN/SENDER] ACK recebido: 10
+[11:38:29.558] [GBN/RECEIVER] Fora de ordem (esperava 12, recebeu 14) → reenviando ACK último=11
+[11:38:29.558] [GBN/SENDER] ACK recebido: 11
+[11:38:29.558] [GBN/SENDER] Base atualizada → 12
+[11:38:29.558] [GBN/SENDER] ACK recebido: 11
+[11:38:29.573] [GBN/SENDER] Enviado seq=16 → Mensagem 17
+[11:38:29.762] [CANAL] Pacote enviado com atraso de 0,178s → 127.0.0.1
+[11:38:29.762] [GBN/RECEIVER] Fora de ordem (esperava 12, recebeu 16) → reenviando ACK último=11
+[11:38:29.762] [GBN/SENDER] ACK recebido: 11
+[11:38:31.559] [GBN/SENDER] TIMEOUT → retransmitindo janela 12 até 16
+[11:38:31.559] [GBN/SENDER] Reenvio seq=12
+[11:38:31.559] [GBN/SENDER] Reenvio seq=13
+[11:38:31.559] [GBN/SENDER] Reenvio seq=14
+[11:38:31.559] [GBN/SENDER] Reenvio seq=15
+[11:38:31.559] [GBN/SENDER] Reenvio seq=16
+[11:38:31.666] [CANAL] Pacote enviado com atraso de 0,100s → 127.0.0.1
+[11:38:31.666] [GBN/RECEIVER] Fora de ordem (esperava 12, recebeu 13) → reenviando ACK último=11
+[11:38:31.666] [GBN/SENDER] ACK recebido: 11
+[11:38:31.682] [CANAL] Pacote enviado com atraso de 0,117s → 127.0.0.1
+[11:38:31.682] [GBN/RECEIVER] Fora de ordem (esperava 12, recebeu 16) → reenviando ACK último=11
+[11:38:31.682] [GBN/SENDER] ACK recebido: 11
+[11:38:31.698] [CANAL] Pacote enviado com atraso de 0,125s → 127.0.0.1
+[11:38:31.698] [GBN/RECEIVER] Fora de ordem (esperava 12, recebeu 14) → reenviando ACK último=11
+[11:38:31.698] [GBN/SENDER] ACK recebido: 11
+[11:38:31.745] [CANAL] Pacote enviado com atraso de 0,174s → 127.0.0.1
+[11:38:31.745] [GBN/RECEIVER] Recebido seq=12 → Mensagem 13
+[11:38:31.746] [GBN/SENDER] ACK recebido: 12
+[11:38:31.746] [GBN/SENDER] Base atualizada → 13
+[11:38:31.760] [GBN/SENDER] Enviado seq=17 → Mensagem 18
+[11:38:31.760] [CANAL] Pacote enviado com atraso de 0,190s → 127.0.0.1
+[11:38:31.760] [GBN/RECEIVER] Fora de ordem (esperava 13, recebeu 15) → reenviando ACK último=12
+[11:38:31.760] [GBN/SENDER] ACK recebido: 12
+[11:38:31.824] [CANAL] Pacote enviado com atraso de 0,051s → 127.0.0.1
+[11:38:31.824] [GBN/RECEIVER] Fora de ordem (esperava 13, recebeu 17) → reenviando ACK último=12
+[11:38:31.824] [GBN/SENDER] ACK recebido: 12
+[11:38:33.755] [GBN/SENDER] TIMEOUT → retransmitindo janela 13 até 17
+[11:38:33.755] [GBN/SENDER] Reenvio seq=13
+[11:38:33.755] [GBN/SENDER] Reenvio seq=14
+[11:38:33.755] [GBN/SENDER] Reenvio seq=15
+[11:38:33.755] [GBN/SENDER] Reenvio seq=16
+[11:38:33.755] [GBN/SENDER] Reenvio seq=17
+[11:38:33.820] [CANAL] Pacote enviado com atraso de 0,063s → 127.0.0.1
+[11:38:33.820] [GBN/RECEIVER] Fora de ordem (esperava 13, recebeu 15) → reenviando ACK último=12
+[11:38:33.820] [GBN/SENDER] ACK recebido: 12
+[11:38:33.851] [CANAL] Pacote enviado com atraso de 0,089s → 127.0.0.1
+[11:38:33.851] [GBN/RECEIVER] Recebido seq=13 → Mensagem 14
+[11:38:33.851] [GBN/SENDER] ACK recebido: 13
+[11:38:33.851] [GBN/SENDER] Base atualizada → 14
+[11:38:33.868] [GBN/SENDER] Enviado seq=18 → Mensagem 19
+[11:38:33.868] [CANAL] Pacote enviado com atraso de 0,112s → 127.0.0.1
+[11:38:33.868] [GBN/RECEIVER] Recebido seq=14 → Mensagem 15
+[11:38:33.868] [GBN/SENDER] ACK recebido: 14
+[11:38:33.868] [GBN/SENDER] Base atualizada → 15
+[11:38:33.884] [CANAL] Pacote enviado com atraso de 0,122s → 127.0.0.1
+[11:38:33.884] [GBN/RECEIVER] Fora de ordem (esperava 15, recebeu 17) → reenviando ACK último=14
+[11:38:33.884] [GBN/SENDER] ACK recebido: 14
+[11:38:33.899] [CANAL] Pacote enviado com atraso de 0,132s → 127.0.0.1
+[11:38:33.899] [GBN/RECEIVER] Fora de ordem (esperava 15, recebeu 16) → reenviando ACK último=14
+[11:38:33.899] [GBN/SENDER] ACK recebido: 14
+[11:38:33.961] [CANAL] Pacote enviado com atraso de 0,090s → 127.0.0.1
+[11:38:33.961] [GBN/RECEIVER] Fora de ordem (esperava 15, recebeu 18) → reenviando ACK último=14
+[11:38:33.961] [GBN/SENDER] ACK recebido: 14
+[11:38:33.970] [GBN/SENDER] Enviado seq=19 → Mensagem 20
+[11:38:34.075] ERRO: Erro no listener de ACKs
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.DatagramSocketAdaptor.receive(DatagramSocketAdaptor.java:215)
+	at java.base/java.net.DatagramSocket.receive(DatagramSocket.java:714)
+	at org.redes.fase2.GBNSender.lambda$startAckListener$0(GBNSender.java:84)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.nio.channels.AsynchronousCloseException
+	at java.base/sun.nio.ch.DatagramChannelImpl.endRead(DatagramChannelImpl.java:565)
+	at java.base/sun.nio.ch.DatagramChannelImpl.blockingReceive(DatagramChannelImpl.java:728)
+	at java.base/sun.nio.ch.DatagramSocketAdaptor.receive(DatagramSocketAdaptor.java:204)
+	... 3 more
+
+
+
+}
+}

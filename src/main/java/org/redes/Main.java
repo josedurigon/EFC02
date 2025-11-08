@@ -8,6 +8,8 @@ import org.redes.fase1.rdt21.Rdt21Receiver;
 import org.redes.fase1.rdt21.Rdt21Sender;
 import org.redes.fase1.rdt30.Rdt30Receiver;
 import org.redes.fase1.rdt30.Rdt30Sender;
+import org.redes.fase2.GBNReceiver;
+import org.redes.fase2.GBNSender;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -32,6 +34,11 @@ public class Main {
             case "rdt30":
                 executarRdt30();
                 break;
+
+            case "gbn":
+                executarGoBackN();
+                break;
+
             default:
                 System.out.println("Fase desconhecida: " + fase);
         }
@@ -109,6 +116,36 @@ public class Main {
         canal.shutdown();
         receptor.join();
     }
+
+    private static void executarGoBackN() throws Exception {
+        Logger.log("[MAIN] Iniciando teste da Fase 2 (Go-Back-N)");
+        ChannelUnreliable canal = new ChannelUnreliable(0.1, 0.05, 0.05, 0.2);
+
+        Thread receptor = new Thread(() -> {
+            try {
+                GBNReceiver recv = new GBNReceiver(9010);
+                recv.start();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        receptor.start();
+        Thread.sleep(500);
+
+        GBNSender sender = new GBNSender("localhost", 9010, canal, 5, 2000);
+        sender.startAckListener();
+
+        for (int i = 1; i <= 20; i++) {
+            sender.send("Mensagem " + i);
+            Thread.sleep(100);
+        }
+
+        sender.close();
+        canal.shutdown();
+        receptor.join();
+    }
+
 
 
 }
