@@ -10,6 +10,8 @@ import org.redes.fase1.rdt30.Rdt30Receiver;
 import org.redes.fase1.rdt30.Rdt30Sender;
 import org.redes.fase2.GBNReceiver;
 import org.redes.fase2.GBNSender;
+import org.redes.fase3.SRReceiver;
+import org.redes.fase3.SRSender;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -37,6 +39,9 @@ public class Main {
 
             case "gbn":
                 executarGoBackN();
+                break;
+            case "sr":
+                executarSelectiveRepeat();
                 break;
 
             default:
@@ -145,6 +150,35 @@ public class Main {
         canal.shutdown();
         receptor.join();
     }
+
+    private static void executarSelectiveRepeat() throws Exception {
+        Logger.log("[MAIN] Iniciando teste da Fase 3 (Selective Repeat)");
+        ChannelUnreliable canal = new ChannelUnreliable(0.1, 0.05, 0.05, 0.2);
+
+        Thread receptor = new Thread(() -> {
+            try {
+                SRReceiver recv = new SRReceiver(9020, 5);
+                recv.start();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        receptor.start();
+        Thread.sleep(500);
+
+        SRSender sender = new SRSender("localhost", 9020, canal, 5, 2000);
+        sender.startAckListener();
+
+        for (int i = 1; i <= 20; i++) {
+            sender.send("Mensagem " + i);
+            Thread.sleep(100);
+        }
+
+        sender.close();
+        canal.shutdown();
+        receptor.join();
+    }
+
 
 
 
