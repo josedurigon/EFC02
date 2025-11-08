@@ -30,7 +30,7 @@ public class Main {
 
                 break;
             case "rdt30":
-//                executarRdt30();
+                executarRdt30();
                 break;
             default:
                 System.out.println("Fase desconhecida: " + fase);
